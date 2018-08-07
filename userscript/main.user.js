@@ -81,7 +81,7 @@ chrome.storage.sync.get(["iOaccounts","iOfriendlist"], function (data) {
     else{start();}
 });
 */
-var registeredUsers = localStorage.getItem("iOaccounts");
+var registeredUsers = localStorage.getItem("iOaccounts") === undefined ? [] : JSON.parse(localStorage.getItem("iOaccounts"));
 var friendList = localStorage.getItem("iOfriendlist");
 start();
 
